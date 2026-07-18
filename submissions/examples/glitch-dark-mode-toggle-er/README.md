@@ -2,19 +2,24 @@
 
 A pure CSS dark/light mode toggle with a glitch animation effect that plays during state transitions — no JavaScript required.
 
-## What it does
+> Submission track: `submissions/examples/glitch-dark-mode-toggle-er/`
+> Contributor suffix: `er`
+> Resolves: Issue #41514
+
+---
+
+## What does this do?
 
 A reusable dark mode toggle switch that uses the native `<input type="checkbox">` `:checked` pseudo-class and CSS `:has()` selector to switch the page between light and dark themes, with animated glitch artifacts on the track, thumb, and label text during the transition.
 
-## How it is used
+## How is it used?
 
 ```html
 <label class="ease-glitch-toggle" aria-label="Toggle dark mode">
   <input type="checkbox" class="ease-glitch-toggle-input" />
   <span class="ease-glitch-toggle-track">
     <span class="ease-glitch-toggle-thumb">
-      <svg class="ease-glitch-toggle-icon ease-glitch-toggle-icon--sun" ...>...</svg>
-      <svg class="ease-glitch-toggle-icon ease-glitch-toggle-icon--moon" ...>...</svg>
+      <!-- Sun / Moon SVG icons -->
     </span>
   </span>
   <span class="ease-glitch-toggle-label-text">
@@ -26,9 +31,11 @@ A reusable dark mode toggle switch that uses the native `<input type="checkbox">
 
 Wrap the entire control in a `<label>` so clicking anywhere toggles the checkbox. To apply dark mode to your page, use `:has(.ease-glitch-toggle-input:checked)` on a parent element to swap CSS custom properties.
 
-## Why it fits EaseMotion CSS
+## Why is it useful?
 
 This component follows EaseMotion's zero-dependency, animation-first, pure-CSS philosophy. It uses `ease-kf-*` prefixed keyframes (`ease-kf-glitch-track-flash`, `ease-kf-glitch-thumb-jitter`, `ease-kf-glitch-text-artifact`), CSS custom properties for theming, and respects `prefers-reduced-motion` for accessibility. The glitch effect is built entirely with CSS pseudo-elements, `clip-path`, and `mix-blend-mode` — no JavaScript or external libraries needed.
+
+---
 
 ## CSS Custom Properties
 
@@ -53,8 +60,16 @@ This component follows EaseMotion's zero-dependency, animation-first, pure-CSS p
 - Visible `:focus-visible` outline on the hidden input reflects onto the track.
 - `prefers-reduced-motion: reduce` collapses all transitions and animations to near-instant.
 
-## Files included
+## Files
 
-- `demo.html` — self-contained browser demo
-- `style.css` — pure CSS implementation
-- `README.md` — this documentation
+| File | Purpose |
+|---|---|
+| `demo.html` | Self-contained browser demo |
+| `style.css` | Pure CSS implementation |
+| `README.md` | This document |
+
+## Compliance notes
+
+- Only **new files** inside `submissions/examples/` — no existing files modified or deleted.
+- No CDN links, external JS frameworks, or remote fonts.
+- Folder name carries the unique contributor suffix `-er`.
