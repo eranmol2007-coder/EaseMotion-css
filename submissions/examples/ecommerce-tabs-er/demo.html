@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Pulse-Active Tabs – EaseMotion CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav__inner">
+            <a href="#" class="nav__logo">ShopWave<span class="nav__dot">.</span></a>
+            <div class="nav__links">
+                <a href="#" class="nav__link">Shop</a>
+                <a href="#" class="nav__link">Orders</a>
+                <a href="#" class="nav__link nav__link--cart">&#128722; Cart (3)</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main">
+        <div class="container">
+
+            <header class="checkout-header">
+                <h1 class="checkout-header__title">Checkout</h1>
+                <div class="checkout-header__steps">
+                    <span class="step step--active">1. Cart</span>
+                    <span class="step__arrow">&#8594;</span>
+                    <span class="step">2. Shipping</span>
+                    <span class="step__arrow">&#8594;</span>
+                    <span class="step">3. Payment</span>
+                    <span class="step__arrow">&#8594;</span>
+                    <span class="step">4. Confirm</span>
+                </div>
+            </header>
+
+            <!-- Tab Component -->
+            <section class="tab-section">
+                <div class="tabs">
+                    <input type="radio" name="ec-tabs" id="ectab-1" class="tabs__radio" checked>
+                    <label for="ectab-1" class="tabs__label">
+                        <span class="tabs__num">1</span>
+                        <span class="tabs__label-text">Cart</span>
+                    </label>
+
+                    <input type="radio" name="ec-tabs" id="ectab-2" class="tabs__radio">
+                    <label for="ectab-2" class="tabs__label">
+                        <span class="tabs__num">2</span>
+                        <span class="tabs__label-text">Shipping</span>
+                    </label>
+
+                    <input type="radio" name="ec-tabs" id="ectab-3" class="tabs__radio">
+                    <label for="ectab-3" class="tabs__label">
+                        <span class="tabs__num">3</span>
+                        <span class="tabs__label-text">Payment</span>
+                    </label>
+
+                    <input type="radio" name="ec-tabs" id="ectab-4" class="tabs__radio">
+                    <label for="ectab-4" class="tabs__label">
+                        <span class="tabs__num">4</span>
+                        <span class="tabs__label-text">Confirm</span>
+                    </label>
+
+                    <div class="tabs__panels">
+
+                        <!-- Cart Panel -->
+                        <div class="tabs__panel" role="tabpanel">
+                            <h3 class="panel__title">Your Cart</h3>
+                            <p class="panel__desc">Review your items before proceeding to checkout.</p>
+                            <div class="cart-items">
+                                <div class="cart-item">
+                                    <div class="cart-item__img" style="background: linear-gradient(135deg, #6366f1, #818cf8);"></div>
+                                    <div class="cart-item__info">
+                                        <span class="cart-item__name">Wireless Headphones</span>
+                                        <span class="cart-item__variant">Color: Midnight Black</span>
+                                    </div>
+                                    <span class="cart-item__price">$149.99</span>
+                                </div>
+                                <div class="cart-item">
+                                    <div class="cart-item__img" style="background: linear-gradient(135deg, #f97316, #fb923c);"></div>
+                                    <div class="cart-item__info">
+                                        <span class="cart-item__name">USB-C Charging Cable</span>
+                                        <span class="cart-item__variant">Length: 2m</span>
+                                    </div>
+                                    <span class="cart-item__price">$19.99</span>
+                                </div>
+                                <div class="cart-item">
+                                    <div class="cart-item__img" style="background: linear-gradient(135deg, #22c55e, #4ade80);"></div>
+                                    <div class="cart-item__info">
+                                        <span class="cart-item__name">Phone Case</span>
+                                        <span class="cart-item__variant">Model: Galaxy S24</span>
+                                    </div>
+                                    <span class="cart-item__price">$24.99</span>
+                                </div>
+                            </div>
+                            <div class="cart-summary">
+                                <div class="cart-summary__row">
+                                    <span>Subtotal</span>
+                                    <span>$194.97</span>
+                                </div>
+                                <div class="cart-summary__row">
+                                    <span>Shipping</span>
+                                    <span>$9.99</span>
+                                </div>
+                                <div class="cart-summary__row cart-summary__row--total">
+                                    <span>Total</span>
+                                    <span>$204.96</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Shipping Panel -->
+                        <div class="tabs__panel" role="tabpanel">
+                            <h3 class="panel__title">Shipping Details</h3>
+                            <p class="panel__desc">Enter your delivery address and preferred shipping method.</p>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label class="form-label">Full Name</label>
+                                    <input type="text" class="form-input" value="Jane Doe" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-input" value="jane@example.com" readonly>
+                                </div>
+                                <div class="form-group form-group--full">
+                                    <label class="form-label">Address</label>
+                                    <input type="text" class="form-input" value="123 Market Street, Apt 4B" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">City</label>
+                                    <input type="text" class="form-input" value="San Francisco" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Zip Code</label>
+                                    <input type="text" class="form-input" value="94102" readonly>
+                                </div>
+                            </div>
+                            <div class="shipping-options">
+                                <label class="shipping-option shipping-option--selected">
+                                    <input type="radio" name="shipping" checked class="shipping-option__radio">
+                                    <span class="shipping-option__info">
+                                        <span class="shipping-option__name">Standard (5-7 days)</span>
+                                        <span class="shipping-option__price">$9.99</span>
+                                    </span>
+                                </label>
+                                <label class="shipping-option">
+                                    <input type="radio" name="shipping" class="shipping-option__radio">
+                                    <span class="shipping-option__info">
+                                        <span class="shipping-option__name">Express (2-3 days)</span>
+                                        <span class="shipping-option__price">$19.99</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Payment Panel -->
+                        <div class="tabs__panel" role="tabpanel">
+                            <h3 class="panel__title">Payment Method</h3>
+                            <p class="panel__desc">Choose your preferred payment method and enter details.</p>
+                            <div class="payment-methods">
+                                <label class="payment-method payment-method--selected">
+                                    <input type="radio" name="payment" checked class="payment-method__radio">
+                                    <span class="payment-method__icon">&#128179;</span>
+                                    <span class="payment-method__name">Credit Card</span>
+                                </label>
+                                <label class="payment-method">
+                                    <input type="radio" name="payment" class="payment-method__radio">
+                                    <span class="payment-method__icon">&#128177;</span>
+                                    <span class="payment-method__name">PayPal</span>
+                                </label>
+                                <label class="payment-method">
+                                    <input type="radio" name="payment" class="payment-method__radio">
+                                    <span class="payment-method__icon">&#128241;</span>
+                                    <span class="payment-method__name">Apple Pay</span>
+                                </label>
+                            </div>
+                            <div class="form-grid">
+                                <div class="form-group form-group--full">
+                                    <label class="form-label">Card Number</label>
+                                    <input type="text" class="form-input" value="**** **** **** 4242" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Expiry</label>
+                                    <input type="text" class="form-input" value="12/28" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">CVV</label>
+                                    <input type="text" class="form-input" value="***" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Confirm Panel -->
+                        <div class="tabs__panel" role="tabpanel">
+                            <h3 class="panel__title">Order Confirmed!</h3>
+                            <p class="panel__desc">Your order has been placed successfully. Thank you for shopping with us.</p>
+                            <div class="confirm-card">
+                                <div class="confirm-card__icon">&#10003;</div>
+                                <span class="confirm-card__title">Order #SW-28491</span>
+                                <span class="confirm-card__desc">Estimated delivery: July 24-26, 2026</span>
+                            </div>
+                            <div class="confirm-details">
+                                <div class="confirm-row">
+                                    <span class="confirm-row__label">Items</span>
+                                    <span class="confirm-row__val">3</span>
+                                </div>
+                                <div class="confirm-row">
+                                    <span class="confirm-row__label">Shipping</span>
+                                    <span class="confirm-row__val">Standard (5-7 days)</span>
+                                </div>
+                                <div class="confirm-row">
+                                    <span class="confirm-row__label">Payment</span>
+                                    <span class="confirm-row__val">Credit Card **** 4242</span>
+                                </div>
+                                <div class="confirm-row confirm-row--total">
+                                    <span class="confirm-row__label">Total Charged</span>
+                                    <span class="confirm-row__val">$204.96</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+</body>
+</html>
